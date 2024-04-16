@@ -20,7 +20,7 @@ const Payment = ({ price }) => {
     axios.post(`${url}/razor/order`, { amount: amount })
       .then(res => setOrderId(res.data.orderId))
       .catch(err => console.log(err))
-  }, [])
+  }, [amount, url])
 
   function payment(orderId, totalAmount) {
     const updatedCart = []; // cart reset
