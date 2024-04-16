@@ -47,13 +47,12 @@ const Payment = ({ price }) => {
 
   const handleSubmit = () => {
     var options = {
-      key: "rzp_test_mvjXJJfcawOuOt",
-      secret: 'T8TRrRrzBYlKTs3lA84MUXCE',
-      amount: price * 100,
-      currency: "INR",
-      name: "ONLINE RENTAL",
-      order_id: orderId,
-      handler: function (response) {
+      "key": "rzp_test_mvjXJJfcawOuOt",
+      "amount": price * 100,
+      "currency": "INR",
+      "name": "ONLINE RENTAL",
+      "order_id": orderId,
+      "handler": function (response) {
         if (response.razorpay_signature) {
           const totalAmount = price;
           payment(orderId, totalAmount);
@@ -61,15 +60,15 @@ const Payment = ({ price }) => {
           toast.error('payment failed');
         }
       },
-      prefill: {
-        name: JSON.parse(localStorage.getItem('user')).userName, //your customer's name
-        email: JSON.parse(localStorage.getItem('user')).email,
+      "prefill": {
+        "name": JSON.parse(localStorage.getItem('user')).userName, //your customer's name
+        "email": JSON.parse(localStorage.getItem('user')).email,
       },
-      notes: {
-        address: "online rental office address" // company address
+      "notes": {
+        "address": "online rental office address" // company address
       },
-      theme: {
-        color: "#3399cc"
+      "theme": {
+        "color": "#3399cc"
       }
     };
 
