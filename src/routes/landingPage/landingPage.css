@@ -1,0 +1,13 @@
+
+
+.col {
+    padding: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: larger;
+    font-weight: bold;
+}
+

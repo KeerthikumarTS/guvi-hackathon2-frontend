@@ -1,0 +1,18 @@
+.footer{
+    background-color: #343a40;
+    /* background: rgb(0,55,190);
+    background: radial-gradient(circle, rgba(0,55,190,1) 0%, rgba(0,18,46,1) 100%); */
+    padding:3px;
+    font-size: medium;
+    line-height: 2;
+    color:white;
+}
+
+.footer-section-1 , .footer-section-2 > p:hover{
+    cursor: pointer; 
+}
+
+.icon:hover{
+    cursor: pointer;
+    background-color: darkblue;
+}
